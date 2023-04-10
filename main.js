@@ -43,7 +43,7 @@ const validateCred = (arr) => {
     return sum % 10 === 0;
 }
 
-
+console.log(validateCred(valid2));
 
 
 
