@@ -43,7 +43,9 @@ const validateCred = (arr) => {
     return sum % 10 === 0;
 }
 
-console.log(validateCred(valid2));
+console.log(validateCred(valid2)); // prints true
+console.log(validateCred(invalid4)); // prints false
+console.log(validateCred(valid2)); // prints true
 
 
 
