@@ -25,8 +25,22 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Add your functions below:
 
-const validateCred = () => {
-    
+const validateCred = (arr) => { 
+    const digits = arr.slice(); // make a copy of the array
+    const checkDigit = digits.pop(); // remove the check digit and store it separately
+    digits.reverse(); // reverse the array for easier iteration
+    let sum = checkDigit;
+    for (let i = 0; i < digits.length; i++) {
+        let digit = digits[i];
+        if (i % 2 === 0) {
+            digit *= 2;
+            if (digit > 9) {
+                digit -=9;
+            }
+        }
+        sum += digit;
+    }
+    return sum % 10 === 0;
 }
 
 
